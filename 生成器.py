@@ -1,0 +1,22 @@
+def myYield(n):
+    while n>0:
+        print("开始生成...:")
+        yield n
+        print('完成一次...:')
+        n -= 1
+if __name__ == '__main__':
+    '''for i in myYield(4):
+        print('遍历得到的值：',i)
+    print()'''
+    my_yield = myYield(3)
+    print('已经实例化生成器对象')
+    i=my_yield.__next__()
+    print(i)
+    print('第二次调用__next__()方法')
+    i=my_yield.__next__()
+    print(i)
+    #print(my_yield.__next__())
+    #print(i)
+    i=my_yield.__next__()
+    
+    
